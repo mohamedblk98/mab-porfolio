@@ -1,4 +1,5 @@
 import type {Metadata} from 'next';
+import Image from 'next/image';
 import { Inter, Space_Grotesk, Playfair_Display, JetBrains_Mono } from 'next/font/google';
 import { FaWhatsapp } from 'react-icons/fa';
 import './globals.css';
@@ -41,9 +42,11 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
           <LanguageProvider>
             <div className="noise-bg"></div>
             <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none" aria-hidden="true">
-              <img
+              <Image
                 src="/icon.svg"
                 alt=""
+                fill
+                sizes="100vw"
                 className="absolute left-1/2 top-1/2 w-[min(92vw,900px)] md:w-[min(72vw,900px)] -translate-x-1/2 -translate-y-1/2 rotate-0 opacity-[0.035] mix-blend-screen"
               />
             </div>

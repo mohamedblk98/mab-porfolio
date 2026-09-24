@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'motion/react';
 import { usePathname } from 'next/navigation';
 import { useDesignSystem } from './DesignSystemContext';
@@ -101,7 +102,7 @@ export function PageTransition({ children }: { children: React.ReactNode }) {
                 className="absolute h-32 w-32 rounded-full border border-soft-purple/50 border-t-transparent"
               />
               <div className="absolute h-24 w-36 rounded-full bg-modern-blue/10 blur-2xl" />
-              <img src="/icon.svg" alt="MAB Studio" className="relative h-24 w-36 object-contain" />
+              <Image src="/icon.svg" alt="MAB Studio" width={144} height={96} className="relative h-24 w-36 object-contain" />
             </motion.div>
             <div className="mt-8 h-px w-32 overflow-hidden bg-white/10">
               <motion.div
